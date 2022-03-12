@@ -71,6 +71,8 @@ return packer.startup(function(use)
   -- Color schemes
   use 'navarasu/onedark.nvim'
   use 'tanvirtin/monokai.nvim'
+  use 'ellisonleao/gruvbox.nvim'
+
   use { 'rose-pine/neovim', as = 'rose-pine' }
 
   -- LSP
@@ -114,4 +116,13 @@ return packer.startup(function(use)
   if packer_bootstrap then
     require('packer').sync()
   end
+  -- Rust
+  use 'simrat39/rust-tools.nvim'
+
+  -- fzf
+  use {
+    'ibhagwan/fzf-lua',
+    -- optional for icon support
+    requires = { 'kyazdani42/nvim-web-devicons'},
+  }
 end)

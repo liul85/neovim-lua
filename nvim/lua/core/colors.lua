@@ -26,6 +26,15 @@ require('onedark').load()
 
 -- statusline color schemes:
 -- import with: require('colors').colorscheme_name
+require('gruvbox').load()
+
+--vim.opt.termguicolors = true
+--vim.o.background = "dark" -- or "light" for light mode
+--vim.cmd([[colorscheme gruvbox]])
+
+-- Import color scheme with:
+--- require('colors').colorscheme_name
+
 local M = {}
 
 -- Theme: OneDark (dark)
@@ -66,6 +75,19 @@ M.rose_pine = {
   yellow = '#f6c177',
   orange = '#2a2837',
   red = '#ebbcba',
+}
+
+M.gruvbox = {
+  bg = '#282828',
+  fg = '#fbf1c7',
+  gray = '#928374',
+  pink = '#8ec07c',
+  green = '#b8bb26',
+  cyan = '#83a598',
+  yellow = '#fabd2f',
+  orange = '#fe8019',
+  purple = '#d3869b',
+  red = '#fb4934',
 }
 
 return M

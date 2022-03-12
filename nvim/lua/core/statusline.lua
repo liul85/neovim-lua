@@ -17,7 +17,7 @@ if not status_ok then
 end
 
 -- Set colorscheme (from core/colors.lua/colorscheme_name)
-local colors = require('core/colors').onedark_dark
+local colors = require('core/colors').gruvbox
 
 local vi_mode_colors = {
   NORMAL = colors.cyan,
@@ -78,11 +78,12 @@ local comps = {
         name = 'file_info',
         opts = {
           type = 'relative',
-          file_modified_icon = '',
+          file_modified_icon = ' ',
         }
       },
       hl = { fg = colors.cyan },
       icon = '',
+      righ_sep = ' '
     },
     -- File type
     type = {
@@ -91,7 +92,7 @@ local comps = {
         local extension = vim.fn.expand '%:e'
         local icon = require('nvim-web-devicons').get_icon(extension)
         if icon == nil then
-          icon = ' '
+          icon = ' '
         end
         return ' ' .. icon .. ' ' .. type
       end,
@@ -108,13 +109,13 @@ local comps = {
         local os = vim.bo.fileformat:lower()
         local icon
         if os == 'unix' then
-          icon = '  '
+          icon = '🐧️Linux'
         elseif os == 'mac' then
-          icon = '  '
+          icon = 'MacOS'
         else
           icon = '  '
         end
-        return icon .. os
+        return ' ' .. icon
       end,
       hl = { fg = colors.fg },
       left_sep = {
@@ -176,7 +177,7 @@ local comps = {
     },
     hint = {
       provider = 'diagnostic_hints',
-      icon = ' ',
+      icon = '💡️',
       hl = { fg = colors.cyan },
       left_sep = ' ',
     },
@@ -194,7 +195,7 @@ local comps = {
   git = {
     branch = {
       provider = 'git_branch',
-      icon = ' ',
+      icon = '🌿️ ',
       hl = { fg = colors.pink },
       left_sep = '  ',
     },
