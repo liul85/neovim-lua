@@ -80,3 +80,4 @@ map('n', '<C-m>', ':Vista!!<CR>') -- open/close
 
 -- fzf
 map('n', '<C-f>', ":lua require('fzf-lua').files()<CR>")
+map('n', '<C-j>', ":FzfLua buffers<CR>")
