@@ -125,4 +125,7 @@ return packer.startup(function(use)
     -- optional for icon support
     requires = { 'kyazdani42/nvim-web-devicons'},
   }
+
+  -- wakatime
+  use 'wakatime/vim-wakatime'
 end)
